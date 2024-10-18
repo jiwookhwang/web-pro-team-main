@@ -1,0 +1,186 @@
+@charset "UTF-8";
+canvas {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header .popo_nav {
+  padding: 10px;
+  margin: 0;
+}
+header .popo_nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+header .popo_nav ul li {
+  display: inline-block;
+  font-family: "Bagel Fat One", cursive;
+  font-size: 40px;
+}
+header .popo_nav ul .헤더 {
+  margin-right: 35%;
+}
+header .popo_nav ul .헤더 a {
+  color: black;
+  text-decoration: none;
+}
+header .popo_nav ul .헤더 a:hover, header .popo_nav ul .헤더 a::after {
+  color: #f72485;
+}
+header .popo_nav ul .남정욱 {
+  margin-right: 7.5%;
+}
+header .popo_nav ul .남정욱 a {
+  color: black;
+  text-decoration: none;
+}
+header .popo_nav ul .남정욱 a:hover, header .popo_nav ul .남정욱 a::after {
+  color: #710ab7;
+}
+header .popo_nav ul .황지욱 {
+  margin-right: 20%;
+}
+header .popo_nav ul .황지욱 a {
+  color: black;
+  text-decoration: none;
+}
+header .popo_nav ul .황지욱 a:hover, header .popo_nav ul .황지욱 a::after {
+  color: #3b0ca3;
+}
+
+.content {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content img {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  height: 300px;
+  width: 300px;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  border-radius: 2%;
+  float: left;
+}
+.content .box1 {
+  width: 900px;
+  height: 500px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 20px;
+  margin: auto;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  border-radius: 2%;
+  background-color: white;
+}
+.content h1 {
+  display: flex;
+  font-size: 40px;
+  font-family: "Bagel Fat One", cursive;
+  justify-content: center;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+}
+.content .box1:hover {
+  width: 1100px;
+  height: 600px;
+}
+.content .box1:hover img {
+  height: 365px;
+  width: 365px;
+}
+.content .box1:hover h1 {
+  font-size: 60px;
+}
+.content .box1:hover .자기소개, .content .box1:hover .link .관련, .content .link .box1:hover .관련 {
+  font-size: 26px;
+}
+.content .자기소개, .content .link .관련 {
+  font-family: "Bagel Fat One", cursive;
+  margin-top: 5%;
+  font-size: 20px;
+  display: inline-block;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  align-items: right;
+}
+.content .link {
+  color: black;
+  text-decoration: none;
+}
+.content .link .관련 {
+  margin-top: 2.3%;
+  margin-left: 1%;
+}
+.content .box2 {
+  width: 900px;
+  height: 500px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 20px;
+  margin: auto;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  border-radius: 2%;
+  background-color: white;
+}
+.content h1 {
+  display: flex;
+  font-size: 40px;
+  font-family: "Bagel Fat One", cursive;
+  justify-content: center;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+}
+.content .box2:hover {
+  width: 1100px;
+  height: 600px;
+}
+.content .box2:hover img {
+  height: 365px;
+  width: 365px;
+}
+.content .box2:hover h1 {
+  font-size: 60px;
+}
+.content .box2:hover .자기소개, .content .box2:hover .link .관련, .content .link .box2:hover .관련 {
+  font-size: 26px;
+}
+.content .자기소개, .content .link .관련 {
+  font-family: "Bagel Fat One", cursive;
+  margin-top: 5%;
+  font-size: 20px;
+  display: inline-block;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  align-items: right;
+}
+.content .link {
+  color: black;
+  text-decoration: none;
+}
+.content .link .관련 {
+  margin-top: 2.3%;
+  margin-left: 1%;
+}/*# sourceMappingURL=index.css.map */

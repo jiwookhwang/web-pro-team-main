@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>황지욱INFO</title>
+    <link rel="stylesheet" href="./css/남정욱.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bungee+Spice&family=Kanit:ital,wght@0,400;1,200&family=Luckiest+Guy&family=Nanum+Pen+Script&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      /* 모달 스타일 */
+      .modal {
+        border: 1px ;
+        border-radius: 8px;
+        box-shadow: 0 0 3px black;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 10%;
+        top: -100%;
+        width: 80%;
+        height: 60%;
+        overflow: auto;
+        background-color: #fefefe;
+       
+      }
+      /* 닫기 버튼 스타일 */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 50px;
+        font-weight: bold;
+      }
+  
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .modal h1{
+        font-size: 50px;}
+      .modal .자기소개
+       {
+        font-family: 'Bagel Fat One', cursive;
+        margin-top: 3%;
+        font-size: 25px;
+        display: flex;
+        transition: all 0.5s;
+        transition-delay: 0.4s;
+        justify-content: center;
+      }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="title">
+      <h1></h1>
+  </div>
+    <header>
+        <nav class="popo_nav">
+          <div class="nav_content">
+            <ul>
+              <li class="헤더">
+                <a href="index.html">팀 홈페이지</a>
+              </li>
+              <li class="남정욱">
+                <a href="남정욱.html">남정욱</a>
+              </li>
+              <li class="황지욱"><a href="황지욱.html">황지욱</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header> 
+   
+    <div class="chart-wrap">
+      <h1>Used Language</h1>
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <section id="about" >
+      <div class="about_profile" >
+      <div class="property">
+          <div class="property_box" onclick="openModal()">
+              <div class="poster">
+                  <h2>음악</h2>
+                  <figure class="item">
+                      <img src="./images/music.png" alt="">
+                      <p>LIKE</p>
+                  </figure>
+              </div>
+          </div>
+          <div class="property_box "onclick="openModal2()" >
+              <div class="poster">
+                  <h2>컴공</h2>
+                  <figure class="item">
+                      <img src="./images/computer.png" alt="">
+                      <p>MAJOR</p>
+                  </figure>
+              </div>
+          </div>
+          <div class="property_box" onclick="openModal3()" >
+              <div class="poster">
+                  <h2>ISTP</h2>
+                  <figure class="item">
+                      <img src="./images/istp.png" alt="">
+                      <p>MBTI</p>
+                  </figure>
+              </div>
+          </div>
+          <div class="property_box" onclick="openModal4()">
+            <div class="poster">
+                <h2>BnDev</h2>
+                <figure class="item">
+                    <img src="./images/JAVA.png" alt="">
+                    <p>Dream</p>
+                </figure>
+            </div>
+        </div>
+  </section>
+  <div class="chat-wrap">
+    <div class="title-wrap pt-4">
+      <h1>Contact Me 👋</h1>
+    </div>
+    <div class="form-wrap my-4 p-4">
+      <form style="width: 100%" id="contact-form">
+        <div id="tagArea" style="padding: 0 4px"></div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="inputName" name="name" aria-describedby="emailHelp" placeholder="Your name" />
+          <label for="inputName" class="form-label">Your name</label>
+        </div>
+        <div class="form-floating mb-3" style="margin-left: auto; margin-right: auto">
+          <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="Your phone number" value="momkih1234@naver.com" readonly />
+          <label for="inputPhone" class="form-label">Your email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="inputPhone" name="phone" aria-describedby="emailHelp" placeholder="Your email address" />
+          <label for="inputEmail" class="form-label">Your phone number</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea class="form-control" style="height: 13rem; resize: none" name="message" id="floatingTextarea" placeholder="Comments"></textarea>
+          <label for="floatingTextarea">Comments</label>
+        </div>
+        <div class="nav justify-content-end px-2">
+          <button name="submit" class="btn btn-outline-success">전송</button>
+        </div>
+      </form>
+    </div>
+  <div>
+
+    <div id="LIKE" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h1>about</h1>
+        <div class="자기소개">
+          저는 음악을 듣는걸 좋아합니다.
+          <br />
+          개발을 하다가 잘 풀리지 않으면 곧장 음악을 듣습니다.
+          <br />
+          그러면 쌓인 스트레스가 날아가며
+          <br />
+          다시 힘을 낼 수 있을 것 같아집니다.
+        </div>
+      </div>
+
+      <div id="MAJOR" class="modal">
+        <span class="close" onclick="closeModal2()">&times;</span>
+        <h1>about</h1>
+        <div class="자기소개">
+          어릴적부터 컴퓨터를 좋아했습니다.
+          <br />
+          어릴적부터 좋아하던 일로 
+          <br />
+          돈을 벌 수 있단점이 매력적이였습니다.
+          <br />
+          가끔 다른 전공을 했으면 어떻하였을까 싶긴 하지만
+          <br />
+          나름 잘 맞는 전공을 잘 찾아온 것 같습니다.
+        </div>
+      </div>
+
+      
+      <div id="HOBBY" class="modal">
+        <span class="close" onclick="closeModal3()">&times;</span>
+        <h1>about</h1>
+        <div class="자기소개">
+          잇팁입니다.
+          <br />
+          장인정신을 가진 mbti라서 그런지
+          <br />
+          개발할때 더러운 디렉토리나 스파게티 코드를 혐오합니다.
+          <br />
+          좋은 구조에서 좋은 코드가 나온다가 제 좌우명입니다.
+        </div>
+      </div>
+
+      
+      <div id="DREAM" class="modal">
+        <span class="close" onclick="closeModal4()">&times;</span>
+        <h1>about</h1>
+        <div class="자기소개">
+          스프링에 관심이 많습니다.
+          <br />
+          자바의 스프링은 대용량 데이터를 다루기 좋은
+          <br />
+          프레임워크이며 한국에서 사랑받기 때문입니다.
+          <br />
+          또 스프링만 잘해두면 취업걱정은 없기 떄문에 
+          <br />
+          스프링을 열심히 공부하고 있습니다.
+          <br />
+        </div>
+      </div>
+      
+
+    </div>
+    <script src="./js/typing2.js"></script>
+    <script src="./js/script1.js"></script>
+    <script src="./js/chart2.js"></script>
+    <script src="./js/email_bej.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/modal2.js"></script>
+    <script src="./js/modal3.js"></script>
+    <script src="./js/modal4.js"></script>
+</body>
+</html>
